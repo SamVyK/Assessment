@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         this.spriteBody.MovePosition(pos + trans);
     }
 
-    void SetPosDirec(Vector2 direction, bool controlled = false)
+   public void SetPosDirec(Vector2 direction, bool controlled = false)
     {
         if (controlled || !CheckSpace(direction))
         {
