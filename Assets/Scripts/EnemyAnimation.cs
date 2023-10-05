@@ -37,7 +37,7 @@ public class EnemyAnimation : MonoBehaviour
         }
     }
 
-    void Restart()
+    public void Restart()
     {
         animationFrame = -1;
         Advance();

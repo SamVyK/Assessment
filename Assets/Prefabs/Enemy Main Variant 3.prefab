@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Main Variant 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4004387086385462436, guid: 8df6559ea29d6504cb83fce5dc948cc1, type: 3}
+      propertyPath: startingBehavior
+      value: 
+      objectReference: {fileID: 4290826613347090719}
     - target: {fileID: 4004387086385462438, guid: 8df6559ea29d6504cb83fce5dc948cc1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -77,3 +81,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8df6559ea29d6504cb83fce5dc948cc1, type: 3}
+--- !u!114 &4290826613347090719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7759842107957523554, guid: 8df6559ea29d6504cb83fce5dc948cc1, type: 3}
+  m_PrefabInstance: {fileID: 3441757978431736449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b15833e628cf34f8f6369d4748da76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
