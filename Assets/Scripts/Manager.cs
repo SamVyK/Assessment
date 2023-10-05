@@ -103,6 +103,10 @@ public class Manager : MonoBehaviour
 
     public void BigDotConsumed(BigDot dot)
     {
+        for(int i = 0; i < this.enemies.Length; i++)
+        {
+            this.enemies[i].enemyWeak.EnableEnemy(dot.period);
+        }
         DotConsumed(dot);
         CancelInvoke();
         Invoke(nameof(ResetEnemyMultiplier), dot.period);
