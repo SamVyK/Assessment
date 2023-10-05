@@ -36,4 +36,10 @@ public class Player : MonoBehaviour
             this.playerMovement.SetPosDirec(Vector2.left);
         }
     }
+
+    public void ResetPos()
+    {
+        this.gameObject.SetActive(true);
+        this.playerMovement.ResetPos();
+    }
 }

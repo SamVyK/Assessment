@@ -26,7 +26,7 @@ public class EnemyMovement : MonoBehaviour
         ResetPos();
     }
 
-    void ResetPos()
+    public void ResetPos()
     {
         this.velocityMulti = 1.0f;
         this.direction = this.startingDirection;

@@ -48,9 +48,9 @@ public class Manager : MonoBehaviour
         ResetEnemyMultiplier();
         for (int i = 0; i < enemies.Length; i++)
         {
-            this.enemies[i].gameObject.SetActive(true);
+            this.enemies[i].ResetPos();
         }
-        this.player.gameObject.SetActive(true);
+        this.player.ResetPos();
     }
 
      void GameEnd()
@@ -62,13 +62,13 @@ public class Manager : MonoBehaviour
         this.player.gameObject.SetActive(false);
     }
 
-     void EnemyKilled(Enemy enemy)
+     public void EnemyKilled(Enemy enemy)
     {
         SetTotal(this.total + (enemy.marks * this.enemyMultiplier));
         this.enemyMultiplier++;
     }
 
-    void PlayerKilled() 
+    public void PlayerKilled() 
     {
         this.player.gameObject.SetActive(false);
         SetPlayerLives(this.playerLives - 1);
