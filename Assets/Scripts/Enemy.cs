@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int marks = 200;
-
     public EnemyMovement enemyMovement { get; private set; }
     public EnemyBase enemyBase { get; private set; }
     public EnemyChase enemyChase { get; private set; }

@@ -10,7 +10,7 @@ public class Manager : MonoBehaviour
     public int total { get; private set; }
     public int playerLives { get; private set; }
     public int enemyMultiplier { get; private set; } = 1;
-
+    
     // Start is called before the first frame update
      void Start()
     {
