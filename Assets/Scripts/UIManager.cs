@@ -86,6 +86,11 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Map");
     }
 
+    public void LoadSecondLevel()
+    {
+        SceneManager.LoadScene("Map1");
+    }
+
     public void QuitGame()
     {
 #if UNITY_EDITOR
