@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public Button startGameButton;
     private Camera mainCamera;
     public AudioSource audioSource;
+    public Text totalScoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -114,5 +115,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
+    public void UpdateTotalScoreUI(int score)
+    {
+        totalScoreText.text = "Total Score: " + score.ToString();
+    }
 }

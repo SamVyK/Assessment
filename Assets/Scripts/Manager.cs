@@ -10,7 +10,8 @@ public class Manager : MonoBehaviour
     public int total { get; private set; }
     public int playerLives { get; private set; }
     public int enemyMultiplier { get; private set; } = 1;
-    
+    private int totalScore = 0;
+    public UIManager uiManager;
     // Start is called before the first frame update
      void Start()
     {
@@ -94,6 +95,7 @@ public class Manager : MonoBehaviour
     {
         dot.gameObject.SetActive(false);
         SetTotal(this.total + dot.score);
+        UpdateTotalScore(this.total);
         if (!DotsThatleft())
         {
             this.player.gameObject.SetActive(false);
@@ -110,6 +112,7 @@ public class Manager : MonoBehaviour
         DotConsumed(dot);
         CancelInvoke();
         Invoke(nameof(ResetEnemyMultiplier), dot.period);
+        UpdateTotalScore(this.total);
     }
     private bool DotsThatleft()
     {
@@ -126,5 +129,10 @@ public class Manager : MonoBehaviour
      void ResetEnemyMultiplier()
     {
         this.enemyMultiplier = 1;
+    }
+
+    public void UpdateTotalScore(int score)
+    {
+        total += score;
     }
 }
