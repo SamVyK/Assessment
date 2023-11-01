@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public RectTransform loadingPanel;
     public Button startGameButton;
     private Camera mainCamera;
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -91,5 +92,22 @@ public class UIManager : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }
+
+    public void MuteAudio()
+    {
+        if (audioSource != null)
+        {
+            audioSource.mute = true;
+        }
+    }
+
+    public void UnmuteAudio()
+    {
+        if (audioSource != null)
+        {
+            audioSource.mute = false;
+        }
+    }
+
 
 }
