@@ -9,7 +9,7 @@ public abstract class EnemyBehavior : MonoBehaviour
     private void Awake()
     {
         this.enemy = GetComponent<Enemy>();
-        this.enabled = false;
+        //this.enabled = false;
     }
 
     public void EnableEnemy()

@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class EnemyBase : EnemyBehavior
 {
     public Transform baseTransformInside;
-    public Transform baseTransformOutide;
+    public Transform baseTransformOutside;
 
     void OnEnable()
     {
@@ -47,7 +47,7 @@ public class EnemyBase : EnemyBehavior
         pass = 0.0f;
         while (pass < period)
         {
-            Vector3 newPos = Vector3.Lerp(this.baseTransformInside.position, this.baseTransformOutide.position, pass / period);
+            Vector3 newPos = Vector3.Lerp(this.baseTransformInside.position, this.baseTransformOutside.position, pass / period);
             newPos.z = pos.z;
             this.enemy.transform.position = pos;
             pass += Time.deltaTime;
