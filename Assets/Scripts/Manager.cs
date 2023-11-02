@@ -25,7 +25,7 @@ public class Manager : MonoBehaviour
      void SetGame() 
     {
         SetTotal(0);
-        SetPlayerLives(4);
+        SetPlayerLives(3);
         NewLvl();
     }
 

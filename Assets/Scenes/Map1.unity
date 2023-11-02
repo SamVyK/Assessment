@@ -9371,11 +9371,11 @@ Tilemap:
   - first: {x: -13, y: 3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
+      m_TileIndex: 2
       m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 0
+      m_TileObjectToInstantiateIndex: 2
       dummyAlignment: 0
       m_AllTileFlags: 2
   - first: {x: -12, y: 3, z: 0}
@@ -9581,11 +9581,11 @@ Tilemap:
   - first: {x: 12, y: 3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
+      m_TileIndex: 2
       m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 0
+      m_TileObjectToInstantiateIndex: 2
       dummyAlignment: 0
       m_AllTileFlags: 2
   - first: {x: -13, y: 4, z: 0}
@@ -10790,11 +10790,19 @@ Tilemap:
       m_AllTileFlags: 2
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 346
+  - m_RefCount: 344
     m_Data: {fileID: 11400000, guid: 2498f6fea3eba61439d8571a383fdbf8, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 51f839d068e4630498b0fe4831c75804, type: 2}
-  m_TileSpriteArray: []
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 5955ccaa492094f4b897f53b057fb51a, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 350
     m_Data:
@@ -10818,10 +10826,12 @@ Tilemap:
   - m_RefCount: 350
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray:
-  - m_RefCount: 346
+  - m_RefCount: 344
     m_Data: {fileID: 4984438839008513303, guid: 761757e709c942d4ea5ae9c113a8e836, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 6111014034663158484, guid: b997d0c490ffd814bb9433b308ed673d, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 2797924247734281922, guid: 79ec51a33725da44e807a7267f4d3655, type: 3}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -17, y: -18, z: 0}
@@ -12360,7 +12370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Loading...
+  m_Text: 1...2...3...Go!
 --- !u!222 &1634384685
 CanvasRenderer:
   m_ObjectHideFlags: 0
