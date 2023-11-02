@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -82,12 +83,27 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void LoadFirstLevel()
+    public void LoadMapMenu()
+    {
+        SceneManager.LoadScene("MapMenu");
+    }
+
+    public void Lvl1()
     {
         SceneManager.LoadScene("Map");
     }
 
-    public void LoadSecondLevel()
+    public void Lvl2()
+    {
+        SceneManager.LoadScene("Map1");
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
+    public void SkipLevel()
     {
         SceneManager.LoadScene("Map1");
     }
@@ -115,8 +131,4 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void UpdateTotalScoreUI(int score)
-    {
-        totalScoreText.text = "Total Score: " + score.ToString();
-    }
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class Manager : MonoBehaviour
     private int totalScore = 0;
     public UIManager uiManager;
     // Start is called before the first frame update
-     void Start()
+    void Start()
     {
         SetGame();
     }
@@ -95,11 +97,11 @@ public class Manager : MonoBehaviour
     {
         dot.gameObject.SetActive(false);
         SetTotal(this.total + dot.score);
-        UpdateTotalScore(this.total);
+        UpdateTotalScore(dot.score);
         if (!DotsThatleft())
         {
             this.player.gameObject.SetActive(false);
-            Invoke(nameof(NewLvl), 3.0f);
+            Invoke(nameof(LoadMapMenu), 3.0f);
         }
     }
 
@@ -112,7 +114,8 @@ public class Manager : MonoBehaviour
         DotConsumed(dot);
         CancelInvoke();
         Invoke(nameof(ResetEnemyMultiplier), dot.period);
-        UpdateTotalScore(this.total);
+        UpdateTotalScore(dot.score);
+
     }
     private bool DotsThatleft()
     {
@@ -131,8 +134,21 @@ public class Manager : MonoBehaviour
         this.enemyMultiplier = 1;
     }
 
+
     public void UpdateTotalScore(int score)
     {
-        total += score;
+        totalScore += score;
+    }
+
+    public void UpdateTotalScoreUI(int score)
+    {
+        totalScore += score;
+        uiManager.totalScoreText.text = "Total Score: " + totalScore.ToString();
+
+    }
+
+    public void LoadMapMenu()
+    {
+        SceneManager.LoadScene("MapMenu");
     }
 }
