@@ -16,6 +16,8 @@ public class Manager : MonoBehaviour
     public UIManager uiManager;
     public AudioSource playerDeathAudio;
     public AudioSource backgroundMusic;
+    public AudioSource pickUp;
+    public AudioSource enemyKilled;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +74,7 @@ public class Manager : MonoBehaviour
     {
         SetTotal(this.total + (enemy.marks * this.enemyMultiplier));
         this.enemyMultiplier++;
+        enemyKilled.Play();
     }
 
     public void PlayerKilled() 
@@ -105,6 +108,7 @@ public class Manager : MonoBehaviour
     {
         dot.gameObject.SetActive(false);
         SetTotal(this.total + dot.score);
+        pickUp.Play();
         UpdateTotalScore(dot.score);
         if (!DotsThatleft())
         {
@@ -120,6 +124,7 @@ public class Manager : MonoBehaviour
             this.enemies[i].enemyWeak.EnableEnemy(dot.period);
         }
         DotConsumed(dot);
+        pickUp.Play();
         CancelInvoke();
         Invoke(nameof(ResetEnemyMultiplier), dot.period);
         UpdateTotalScore(dot.score);
