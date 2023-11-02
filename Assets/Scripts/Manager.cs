@@ -14,6 +14,8 @@ public class Manager : MonoBehaviour
     public int enemyMultiplier { get; private set; } = 1;
     private int totalScore = 0;
     public UIManager uiManager;
+    public AudioSource playerDeathAudio;
+    public AudioSource backgroundMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,7 @@ public class Manager : MonoBehaviour
             this.enemies[i].ResetPos();
         }
         this.player.ResetPos();
+        backgroundMusic.Play();
     }
 
      void GameEnd()
@@ -75,7 +78,12 @@ public class Manager : MonoBehaviour
     {
         this.player.gameObject.SetActive(false);
         SetPlayerLives(this.playerLives - 1);
-        if(this.playerLives > 0)
+        if (playerDeathAudio != null)
+        {
+            playerDeathAudio.Play();
+            backgroundMusic.Stop();
+        }
+        if (this.playerLives > 0)
         {
             Invoke(nameof(ResetPos), 4.0f);
         }
